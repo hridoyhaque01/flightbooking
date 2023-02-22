@@ -1,0 +1,9 @@
+export { default as favicon } from "./favicon.png";
+export { default as banner } from "./Hero-Banner.webp";
+export { default as frame } from "./icons/Frame.svg";
+export { default as frame1 } from "./icons/Frame1.svg";
+export { default as vector } from "./icons/Vector.svg";
+export { default as vector1 } from "./icons/Vector1.svg";
+export { default as vector2 } from "./icons/Vector2.svg";
+export { default as vector3 } from "./icons/Vector3.svg";
+export { default as logo } from "./lws-logo.svg";
