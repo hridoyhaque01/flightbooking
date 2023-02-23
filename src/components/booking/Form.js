@@ -3,7 +3,7 @@ import { frame, vector1, vector3 } from "../../img/Images";
 import { addBooking } from "../../redux/flightbooking/action";
 
 export default function Form({ state, dispatch }) {
-  let isTrue = state.length === 3 ? true : false;
+  let isTrue = false;
 
   const [values, setValues] = useState({
     id: new Date().getTime().toString(),
@@ -16,6 +16,15 @@ export default function Form({ state, dispatch }) {
 
   const formHandler = (event) => {
     event.preventDefault();
+
+    if (state.length === 3) {
+      isTrue = true;
+      alert("You have added the maximum number of booking");
+      return;
+    } else {
+      isTrue = false;
+    }
+
     const id = new Date().getTime().toString();
     setValues({ ...values, id: id });
     dispatch(addBooking(values));
